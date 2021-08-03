@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+
+import React from 'react';
+import axios from 'axios';
+
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setPizzas } from './redux/actions/pizzas';
+
+import Home from './pages/Home';
 
 function App() {
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    async function fetchData() {
+      const { data } = await axios.get('https://6108109dd73c6400170d37e1.mockapi.io/api/pizzas');
+
+      dispatch(setPizzas(data));
+    }
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Header />
+
+      <Home />
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.sort {
+  b {
+    font-weight: 14px;
+    font-weight: 700;
+  }
+
+  select {
+    border: 0px;
+    outline: 0px;
+    color: #fe5f1e;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    font-size: 14px;
+    font-weight: 400;
+
+    option {
+      color: #000;
+    }
+  }
+}

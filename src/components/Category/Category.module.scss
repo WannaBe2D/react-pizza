@@ -1,0 +1,20 @@
+.categories {
+  display: flex;
+  .category {
+    cursor: pointer;
+    border-radius: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+
+    span {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
