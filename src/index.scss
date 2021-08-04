@@ -4,6 +4,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffdf8c;
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
 .wrapper {

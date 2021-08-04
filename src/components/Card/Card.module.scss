@@ -15,6 +15,7 @@
   background-color: #f3f3f3;
   padding: 7px;
   border-radius: 10px;
+  cursor: pointer;
 
   .sizes {
     padding: 0;
@@ -82,7 +83,22 @@
     }
 
     p {
+      display: flex;
+      align-items: center;
       margin: 0;
+      div {
+        margin-left: 3px;
+        background-color: #eb5a1e;
+        border-radius: 30px;
+        color: #fff;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+        font-size: 13px;
+        font-weight: 700;
+      }
     }
   }
 }
