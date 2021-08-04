@@ -60,9 +60,7 @@ function Home() {
                 types={element.types}
                 sizes={element.sizes}
                 handleAddPizzaToCart={handleAddPizzaToCart}
-                countItemInCart={
-                  cartItems[element.id] && cartItems.filter((x) => x.id === element.id).length
-                }
+                countItemInCart={cartItems.filter((x) => x.id === element.id).length}
               />
             ))
           : [...Array(8)].map((e, index) => <LoadingCard key={index} />)}

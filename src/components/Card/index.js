@@ -106,7 +106,7 @@ const Card = React.memo(function Card({
               fill="#EB5A1E"
             />
           </svg>
-          <p>Добавить {countItemInCart > 0 && <div>{countItemInCart}</div>}</p>
+          <p>Добавить {countItemInCart > 0 && <span>{countItemInCart}</span>}</p>
         </div>
       </div>
     </div>
