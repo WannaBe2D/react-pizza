@@ -81,24 +81,30 @@
     .svgPlus {
       margin-right: 8px;
     }
+  }
+}
+.cardItemCount {
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
 
-    p {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      div {
-        margin-left: 3px;
-        background-color: #eb5a1e;
-        border-radius: 30px;
-        color: #fff;
-        padding-left: 7px;
-        padding-right: 7px;
-        padding-top: 3px;
-        padding-bottom: 3px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-left: 10px;
+    width: 22px;
+    height: 22px;
+    background-color: #eb5a1e;
+    border-radius: 30px;
+    color: #fff;
 
-        font-size: 13px;
-        font-weight: 700;
-      }
-    }
+    font-size: 13px;
+    font-weight: 700;
   }
 }

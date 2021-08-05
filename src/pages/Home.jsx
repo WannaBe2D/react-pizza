@@ -6,7 +6,7 @@ import SortPopUp from '../components/SortPopUp';
 import Category from '../components/Category';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchPizzas, setPizzas } from '../redux/actions/pizzas';
+import { fetchPizzas } from '../redux/actions/pizzas';
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { setCartItem } from '../redux/actions/cart';
 
@@ -18,7 +18,7 @@ const sortItems = [
   { type: 'name', name: 'алфавиту' },
 ];
 
-function Home() {
+const Home = React.memo(function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({ pizzas }) => pizzas.items);
   const { category, sortBy } = useSelector(({ filters }) => filters);
@@ -31,11 +31,11 @@ function Home() {
 
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
-  });
+  }, []);
 
   const onSelectBySort = React.useCallback((value) => {
     dispatch(setSortBy(value));
-  });
+  }, []);
 
   const handleAddPizzaToCart = (obj) => {
     dispatch(setCartItem(obj));
@@ -67,6 +67,6 @@ function Home() {
       </div>
     </div>
   );
-}
+});
 
 export default Home;

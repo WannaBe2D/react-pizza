@@ -1,0 +1,40 @@
+.emptyCart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 200px;
+  padding-right: 200px;
+
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #777777;
+  }
+  img {
+    margin-bottom: 70px;
+  }
+
+  .emptyCartBtn {
+    background-color: #000;
+    border-radius: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    cursor: pointer;
+
+    span {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}

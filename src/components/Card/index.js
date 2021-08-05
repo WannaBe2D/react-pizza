@@ -13,9 +13,6 @@ const Card = React.memo(function Card({
 }) {
   const availableTypes = ['тонкое', 'традиционное'];
   const availableSizes = [26, 30, 40];
-  /*(activeType === index
-                ? { backgroundColor: '#fff', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.04)' }
-                : { backgroundColor: '#f3f3f3' })*/
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
 
@@ -106,7 +103,10 @@ const Card = React.memo(function Card({
               fill="#EB5A1E"
             />
           </svg>
-          <p>Добавить {countItemInCart > 0 && <span>{countItemInCart}</span>}</p>
+          <div className={styles.cardItemCount}>
+            <p>Добавить </p>
+            {countItemInCart > 0 && <div>{countItemInCart}</div>}
+          </div>
         </div>
       </div>
     </div>
